@@ -1,7 +1,7 @@
 <h1 align="center">Hello, this is Furkan.</h1>
 <h3 align="center">A Junior Electronics and Communication Engineering Student at IZTECH</h3>
 
-- 🤖 I am interested in **Robotics, Automation and Space Tech**
+- 🤖 🛰️ I am interested in **Robotics, Automation and Space Tech**
 
   
 <h3 align="left">Languages and Tools:</h3>
