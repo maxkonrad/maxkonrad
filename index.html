@@ -1,1 +1,143 @@
-<p>Hey there!</p>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayran Games | Bağımsız Oyun Stüdyosu</title>
+    <style>
+        /* Temel Ayarlar ve Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0d0d12; color: #ffffff; line-height: 1.6; scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Üst Menü (Navbar) */
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 10%; background: rgba(13, 13, 18, 0.9); 
+            position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); 
+            border-bottom: 1px solid #1f1f2e;
+        }
+        .logo { font-size: 26px; font-weight: 900; letter-spacing: 2px; color: #fff; text-transform: uppercase; }
+        .logo span { color: #ff3366; } /* Aksiyon Rengi */
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav a { font-weight: 600; color: #a0a0a0; transition: color 0.3s; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;}
+        nav a:hover { color: #ff3366; }
+
+        /* Hero (Karşılama) Bölümü */
+        .hero { 
+            height: 80vh; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; text-align: center; padding: 0 20px; 
+            background: radial-gradient(circle at center, #1f1f2e 0%, #0d0d12 70%); 
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 40px; color: #a0a0a0; max-width: 600px; }
+        .btn-main { 
+            display: inline-block; padding: 16px 36px; font-size: 1.1rem; font-weight: bold; 
+            color: #fff; background: #ff3366; border-radius: 8px; 
+            transition: transform 0.2s, box-shadow 0.2s; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3); }
+
+        /* Oyunlar Vitrini */
+        .games { padding: 100px 10%; text-align: center; }
+        .games h2 { font-size: 2.5rem; margin-bottom: 60px; text-transform: uppercase; }
+        .game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        
+        .game-card { 
+            background: #15151e; border-radius: 12px; overflow: hidden; 
+            transition: transform 0.3s, border-color 0.3s; border: 1px solid #2a2a35; 
+            text-align: left;
+        }
+        .game-card:hover { transform: translateY(-10px); border-color: #ff3366; }
+        
+        .game-img { 
+            width: 100%; height: 220px; background-color: #2a2a35; 
+            display: flex; align-items: center; justify-content: center; 
+            color: #666; font-style: italic; overflow: hidden;
+        }
+        .game-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .game-info { padding: 25px; }
+        .game-info h3 { font-size: 1.6rem; margin-bottom: 10px; }
+        .game-info p { color: #8a8a9e; margin-bottom: 25px; font-size: 0.95rem; line-height: 1.5; }
+        
+        .store-btn { 
+            display: block; padding: 12px; background: #2a2a35; 
+            border-radius: 6px; font-weight: bold; transition: background 0.3s; 
+            text-align: center; color: #fff;
+        }
+        .store-btn:hover { background: #ff3366; }
+
+        /* Alt Bilgi (Footer) */
+        footer { 
+            text-align: center; padding: 50px 20px; background: #08080b; 
+            color: #555; margin-top: 50px; border-top: 1px solid #15151e;
+        }
+        .socials { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; }
+        .socials a { font-size: 1.1rem; color: #8a8a9e; font-weight: bold; transition: color 0.3s; }
+        .socials a:hover { color: #fff; }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 20px; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <header>
+        <div class="logo">Ayran<span>Games</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#games">Oyunlar</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Karşılama Ekranı -->
+    <section class="hero" id="home">
+        <h1>Saf Aksiyon. Saf Eğlence.</h1>
+        <p>Bağımsız ruhla geliştirilen, reflekslerinizi ve sabrınızı test edecek mobil oyunlar üretiyoruz.</p>
+        <a href="#games" class="btn-main">Oyunları Keşfet</a>
+    </section>
+
+    <!-- Oyunlar Bölümü -->
+    <section class="games" id="games">
+        <h2>Kütüphane</h2>
+        <div class="game-grid">
+            
+            <!-- Drive & Destroy Kartı -->
+            <div class="game-card">
+                <div class="game-img">
+                    <!-- BURAYA OYUNUN YATAY BİR EKRAN GÖRÜNTÜSÜNÜ EKLEYEBİLİRSİN -->
+                    <!-- <img src="drive-destroy-bg.jpg" alt="Drive and Destroy"> -->
+                    [Drive & Destroy Görseli]
+                </div>
+                <div class="game-info">
+                    <h3>Drive & Destroy</h3>
+                    <p>Tatmin edici bir yıkım deneyimi. Varilleri havaya uçur, aracını güçlendir ve durdurulamaz ol. Bu rekoru geçebilecek misin?</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.AyranStudio.DriveDestroy" class="store-btn" target="_blank">Google Play'de İndir</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer id="contact">
+        <div class="socials">
+            <!-- BURAYA SOSYAL MEDYA LİNKLERİNİ GİR -->
+            <a href="https://www.instagram.com/ayranstudio/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@ayranstudio" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@AyranGamez/" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2026 Ayran Games. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
